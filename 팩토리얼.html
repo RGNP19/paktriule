@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팩토리얼</title>
+    <style>
+        body {
+            background-color: rgb(255, 109, 109);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>팩토리얼</h1>
+    <details>
+        <summary>팩토리얼이 뭔가요?</summary>
+        <p style="color: rgb(182, 255, 129);">팩토리얼은 어떤 수 n에 대해서, 1부터 n까지의 모든 자연수를 곱한 값을 말합니다. 팩토리얼은 n!로 표기합니다.</p>
+        <p style="background-color: white; color: rgb(129, 179, 255);">예를 들어, 5! = 5 × 4 × 3 × 2 × 1 = 120입니다.</p>
+    </details>
+    <input type="number" id="num" placeholder="숫자를 입력하세요">
+    <button onclick="calculateFactorial()">팩토리얼 계산</button>
+    <p id="result"></p>
+    <script>
+        function calculateFactorial() {
+            const num = document.getElementById('num').value;
+            if (num < 0) {
+                document.getElementById('result').innerText = '음수의 팩토리얼은 정의되지 않습니다.';
+            } else {
+                let factorial = 1;
+                for (let i = 1; i <= num; i++) {
+                    factorial *= i;
+                }
+                document.getElementById('result').innerText = `${num}! = ${factorial}`;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
