@@ -20,13 +20,13 @@
         <p style="background-color: white; color: rgb(129, 179, 255);">예를 들어, 5! = 5 × 4 × 3 × 2 × 1 = 120입니다.</p>
     </details>
     <input type="number" id="num" placeholder="숫자를 입력하세요">
-    <button onclick="calculateFactorial()">팩토리얼 계산</button>
+    <button onclick="calculateFactorial()">팩토리얼 계산!</button>
     <p id="result"></p>
     <script>
         function calculateFactorial() {
             const num = document.getElementById('num').value;
             if (num < 0) {
-                document.getElementById('result').innerText = '음수의 팩토리얼은 정의되지 않습니다.';
+                document.getElementById('result').innerText = '음수의 팩토리얼은 정의되지 않아요ㅠㅠㅠ';
             } else {
                 let factorial = 1;
                 for (let i = 1; i <= num; i++) {
@@ -41,3 +41,4 @@
 </body>
 
 </html>
+
